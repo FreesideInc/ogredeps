@@ -14,11 +14,16 @@ src = [
 ]
 
 incdir = include_directories(
-    'zzip',
+    #'zzip',
+    '.',
 )
 
 zziplib  = library('zziplib', src,
   dependencies: [
       zlibDep,
   ],
+  include_directories : incdir)
+
+zziplibDep  = declare_dependency(
+  link_with: zziplib,
   include_directories : incdir)
