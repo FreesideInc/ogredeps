@@ -34,4 +34,7 @@ cc_library(
       "rapidjson/reader.h",
       "rapidjson/writer.h",
     ],
+    includes = [
+        '.'
+    ],
 )
